@@ -8,24 +8,6 @@
 <meta name="description" content="CAD and CAE projects by Mechanical Engineering student Sanket Kumar.">
 
 <link rel="stylesheet" href="assets/css/style.css">
-
-<style>
-/* ---- PROJECT SEPARATION POLISH ---- */
-.section-divider {
-  margin: 100px 0 40px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 60px;
-}
-
-.section-label {
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: var(--accent);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-</style>
-
 </head>
 
 <body>
@@ -43,25 +25,23 @@
 
 <!-- ================= CAD PROJECTS ================= -->
 <section class="section">
-
-  <div class="section-label">Design & Modeling</div>
   <h1>CAD Projects</h1>
   <p>
     Surface and mechanical CAD projects developed using SolidWorks,
-    focusing on design accuracy, surfacing quality, and assembly modeling.
+    focusing on design accuracy, surfacing, ergonomics, and assemblies.
   </p>
 
   <div class="grid">
 
     <!-- ABB ROBOT ARM -->
     <div class="project-card">
-      <img src="assets/images/abb/abb1.png" alt="ABB Robot Arm CAD">
+      <img src="assets/images/abb1.png" alt="ABB Robot Arm CAD">
       <div class="content">
         <h3>ABB Robot Arm</h3>
-        <p>Industrial robotic arm CAD assembly with detailed joints and mechanisms.</p>
+        <p>Industrial robotic arm CAD assembly with articulated joints.</p>
         <div class="project-tags">
           <span>SolidWorks</span>
-          <span>CAD Assembly</span>
+          <span>Assembly</span>
           <span>Robotics</span>
         </div>
         <a href="project/abb-robot-arm.html">View Project →</a>
@@ -70,10 +50,10 @@
 
     <!-- FIGHTER JET SURFACE -->
     <div class="project-card">
-      <img src="assets/images/fighter-jet/jet1.png" alt="Fighter Jet Surface CAD">
+      <img src="assets/images/jet1.png" alt="Fighter Jet Surface CAD">
       <div class="content">
-        <h3>Fighter Jet – Surface CAD Model</h3>
-        <p>Advanced surface modeling of a fighter aircraft with aerodynamic focus.</p>
+        <h3>Fighter Jet – Surface Model</h3>
+        <p>Advanced aircraft surface modeling with aerodynamic focus.</p>
         <div class="project-tags">
           <span>SolidWorks</span>
           <span>Surface Modeling</span>
@@ -85,10 +65,10 @@
 
     <!-- FIGHTER JET ENGINE -->
     <div class="project-card">
-      <img src="assets/images/fighter-engine/engine1.png" alt="Fighter Jet Engine CAD">
+      <img src="assets/images/engine1.png" alt="Fighter Jet Engine CAD">
       <div class="content">
-        <h3>Fighter Jet Engine CAD Model</h3>
-        <p>Detailed CAD model of jet engine internals with cut-section views.</p>
+        <h3>Fighter Jet Engine CAD</h3>
+        <p>Detailed jet engine CAD model with internal components.</p>
         <div class="project-tags">
           <span>SolidWorks</span>
           <span>Engine Design</span>
@@ -100,10 +80,10 @@
 
     <!-- SPORTS CAR -->
     <div class="project-card">
-      <img src="assets/images/sports-car/car1.png" alt="Sports Car CAD">
+      <img src="assets/images/car1.png" alt="Sports Car CAD">
       <div class="content">
-        <h3>Sports Car – Surface CAD Model</h3>
-        <p>Automotive surface CAD focused on aerodynamics and styling.</p>
+        <h3>Sports Car – Surface Model</h3>
+        <p>Automotive exterior CAD focused on styling and aerodynamics.</p>
         <div class="project-tags">
           <span>SolidWorks</span>
           <span>Surface Modeling</span>
@@ -113,17 +93,33 @@
       </div>
     </div>
 
+    <!-- MEDICAL CHAIR -->
+    <div class="project-card">
+      <img src="assets/images/chair1.png" alt="Medical Chair CAD">
+      <div class="content">
+        <h3>Medical Chair with Integrated Heaters</h3>
+        <p>
+          Modified medical chair CAD design with embedded heating system
+          to enhance patient comfort.
+        </p>
+        <div class="project-tags">
+          <span>SolidWorks</span>
+          <span>Product Design</span>
+          <span>Ergonomics</span>
+        </div>
+        <a href="project/medical-chair.html">View Project →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ================= SIMULATION / CAE PROJECTS ================= -->
-<section class="section section-divider">
-
-  <div class="section-label">Analysis & Simulation</div>
-  <h1>Simulation (CAE) Projects</h1>
+<!-- ================= CAE PROJECTS ================= -->
+<section class="section">
+  <h1>CAE / Simulation Projects</h1>
   <p>
-    Engineering simulations performed using ANSYS to evaluate thermal,
-    structural, and coupled physics behavior under real-world conditions.
+    Engineering simulations using ANSYS for thermal, structural,
+    and coupled physics analysis.
   </p>
 
   <div class="grid">
@@ -131,17 +127,16 @@
     <!-- LASER CUT SIMULATION -->
     <div class="project-card">
       <div class="content">
-        <h3>Coupled Transient Thermal & Structural Analysis of Laser Cutting</h3>
+        <h3>Coupled Thermal–Structural Analysis of Laser Cutting</h3>
         <p>
-          Transient CAE study analyzing temperature evolution and stress response
-          during laser cutting of structural steel.
+          Transient CAE simulation evaluating temperature rise and
+          stress evolution during laser cutting.
         </p>
 
         <div class="project-tags">
           <span>ANSYS 2024 R1</span>
           <span>Transient Thermal</span>
           <span>Structural</span>
-          <span>Mechanical APDL</span>
         </div>
 
         <a href="project/laser-cut-thermal-structural.html">View Project →</a>
