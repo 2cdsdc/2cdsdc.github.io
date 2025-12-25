@@ -5,74 +5,199 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ABB Robot Arm | Sanket Kumar</title>
-
-<meta name="description" content="CAD design of an ABB industrial robot arm modeled in SolidWorks with detailed joints and base assembly.">
+<meta name="description" content="ABB Robot Arm CAD design project by Mechanical Engineering student Sanket Kumar using SolidWorks.">
 
 <link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+/* ---------- PROJECT PAGE POLISH ---------- */
+
+.project-hero {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 0 20px;
+}
+
+.project-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.project-hero p {
+  color: #cbd5e1;
+  max-width: 720px;
+}
+
+.badges {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 35px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(79,156,249,0.15);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* image gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 18px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.gallery img:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+
+/* content sections */
+.project-section {
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.project-section h2 {
+  margin-bottom: 16px;
+}
+
+.project-section p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* video */
+.project-video {
+  margin: 50px auto;
+  max-width: 900px;
+}
+
+.project-video video {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+/* back link */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* entry animation */
+.project-hero,
+.project-section,
+.gallery,
+.project-video {
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="../projects.html">← Back to Projects</a>
+  <strong>Sanket Kumar</strong>
+  <div>
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../assets/resume.pdf" target="_blank">Resume</a>
+  </div>
 </nav>
 
-<section class="section">
+<!-- HERO -->
+<section class="project-hero section">
   <h1>ABB Robot Arm</h1>
-
-  <p><b>Category:</b> CAD Design</p>
-  <p><b>Tools Used:</b> SolidWorks</p>
-
   <p>
-    This project involves the complete CAD modeling of an ABB-style
-    industrial robotic arm. The design focuses on realistic joint
-    articulation, structural integrity, and accurate component
-    proportions suitable for industrial automation applications.
+    Industrial robotic arm CAD model designed to replicate real-world
+    articulated robot geometry used in automated manufacturing systems.
   </p>
-</section>
 
-<section class="section">
-  <h2>Design Approach</h2>
-  <p>
-    Each segment of the robot arm was modeled as an individual part and
-    assembled using appropriate mates to replicate real-world rotational
-    and translational motion. Special attention was given to the base,
-    arm joints, and end-effector interface to ensure mechanical realism.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Design Visuals</h2>
-
-  <div class="grid">
-    <img src="../assets/images/abb1.png" alt="ABB Robot Arm Front View">
-    <img src="../assets/images/abb2.png" alt="ABB Robot Arm Side View">
+  <div class="badges">
+    <span class="badge">CAD Design</span>
+    <span class="badge">SolidWorks</span>
+    <span class="badge">Mechanical Assembly</span>
+    <span class="badge">Robotics</span>
   </div>
 </section>
 
-<section class="section">
-  <h2>Motion Demonstration</h2>
+<!-- GALLERY -->
+<section class="gallery">
+  <img src="../assets/images/abb1.png" alt="ABB Robot Arm Isometric View">
+  <img src="../assets/images/abb2.png" alt="ABB Robot Arm Side View">
+</section>
 
-  <video controls style="width:100%;border-radius:16px;">
+<!-- DESCRIPTION -->
+<section class="project-section">
+  <h2>Project Overview</h2>
+  <p>
+    This project focuses on the complete CAD modeling of an ABB-style
+    industrial robotic arm. Each component was modeled as an individual
+    part and assembled using appropriate mates to achieve realistic
+    rotational motion across all joints.
+  </p>
+</section>
+
+<section class="project-section">
+  <h2>Design Approach</h2>
+  <p>
+    The arm consists of a rigid base, shoulder, elbow, and wrist
+    mechanisms designed to simulate real industrial robot kinematics.
+    Emphasis was placed on correct proportions, clean geometry, and
+    assembly constraints to ensure mechanical realism.
+  </p>
+</section>
+
+<!-- VIDEO -->
+<section class="project-video">
+  <h2>Motion Demonstration</h2>
+  <video controls>
     <source src="../assets/videos/abb.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </section>
 
-<section class="section">
-  <h2>Results & Learnings</h2>
+<section class="project-section">
+  <h2>Key Learnings</h2>
   <p>
-    The final assembly successfully demonstrates realistic robot arm
-    geometry and articulation. This project strengthened my understanding
-    of complex assemblies, joint constraints, and industrial robot design
-    principles used in automated manufacturing systems.
+    This project strengthened my understanding of complex CAD assemblies,
+    joint constraints, and robotic arm structure. It also improved my
+    ability to model industrial-grade mechanical systems suitable for
+    automation and manufacturing applications.
   </p>
+
+  <a class="back-link" href="../projects.html">← Back to Projects</a>
 </section>
 
-<footer>
-© 2025 Sanket Kumar
-</footer>
+<footer>© 2025 Sanket Kumar</footer>
 
 </body>
 </html>
-
