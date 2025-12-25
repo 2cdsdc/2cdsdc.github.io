@@ -6,142 +6,62 @@
 
 <title>Sanket Kumar | Mechanical Engineering Portfolio</title>
 
-<meta name="description" content="Mechanical Engineering student portfolio featuring CAD, CAE, simulation and machine learning projects.">
+<meta name="description" content="Mechanical Engineering student portfolio showcasing CAD, CAE, simulation, and machine learning projects.">
 
 <link rel="stylesheet" href="assets/css/style.css">
 
 <style>
-/* HOME PAGE POLISH ONLY – DOES NOT CHANGE TEMPLATE */
+/* ===== HOME PAGE ENHANCEMENT (COMPLETE) ===== */
 
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 90px;
+  align-items: center;
+  position: relative;
+}
+
+/* Heading animation */
 .hero h1 {
-  font-size: 3.2rem;
-  line-height: 1.15;
-  margin-bottom: 18px;
+  font-size: 3.6rem;
+  line-height: 1.1;
+  margin-bottom: 22px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1s ease forwards;
 }
 
 .hero p {
   font-size: 1.05rem;
-  max-width: 560px;
+  max-width: 580px;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.15s;
 }
 
-.hero::after {
+/* Accent line */
+.hero h1::after {
   content: "";
-  position: absolute;
-  width: 140px;
+  display: block;
+  width: 130px;
   height: 4px;
   background: var(--accent);
   margin-top: 20px;
+  border-radius: 6px;
 }
 
-.hero img {
-  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-}
+/* Photo frame */
+.photo-frame {
+  background: linear-gradient(
+    135deg,
+    rgba(79,156,249,0.18),
+    rgba(18,26,47,0.95)
+  );
+  padding: 22px;
+  border-radius: 26px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 1s ease forwards;
+  a
 
-.feature-strip {
-  display: flex;
-  gap: 25px;
-  margin-top: 35px;
-  flex-wrap: wrap;
-}
-
-.feature {
-  background: rgba(255,255,255,0.04);
-  padding: 14px 20px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.feature strong {
-  color: var(--accent);
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- NAVIGATION (UNCHANGED) -->
-<nav>
-  <strong>Sanket Kumar</strong>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <a href="assets/resume.pdf" target="_blank">Resume</a>
-  </div>
-</nav>
-
-<!-- HERO SECTION (SAME STRUCTURE, BETTER VISUALS) -->
-<section class="section hero" style="position:relative;">
-  <div>
-    <h1>Mechanical Engineering Student</h1>
-
-    <p>
-      I design, analyze, and validate mechanical systems using
-      <b>CAD</b>, <b>CAE</b>, and <b>simulation-driven engineering</b>,
-      with experience in SolidWorks, ANSYS, MATLAB, and Python.
-    </p>
-
-    <!-- SMALL HIGHLIGHT STRIP -->
-    <div class="feature-strip">
-      <div class="feature"><strong>CAD</strong> SolidWorks</div>
-      <div class="feature"><strong>CAE</strong> ANSYS</div>
-      <div class="feature"><strong>Analysis</strong> MATLAB</div>
-      <div class="feature"><strong>ML</strong> Python</div>
-    </div>
-  </div>
-
-  <!-- PROFILE IMAGE (UNCHANGED POSITION) -->
-  <img 
-    src="assets/images/profile.jpg"
-    alt="Sanket Kumar Mechanical Engineering Student"
-  >
-</section>
-
-<!-- FEATURED PROJECTS (UNCHANGED TEMPLATE) -->
-<section class="section">
-  <h2>Featured Projects</h2>
-  <br>
-
-  <div class="grid">
-
-    <a href="projects/engine.html">
-      <div class="project-card">
-        <img src="assets/images/engine.jpg" alt="V6 Engine CAD Model">
-        <div class="content">
-          <h3>V6 Engine Assembly</h3>
-          <p>Parametric CAD modeling and motion study using SolidWorks.</p>
-        </div>
-      </div>
-    </a>
-
-    <a href="projects/truss.html">
-      <div class="project-card">
-        <img src="assets/images/truss.jpg" alt="Truss Stress Analysis">
-        <div class="content">
-          <h3>Truss Stress Analysis</h3>
-          <p>Structural FEA and factor of safety evaluation in ANSYS.</p>
-        </div>
-      </div>
-    </a>
-
-    <a href="projects/ml.html">
-      <div class="project-card">
-        <img src="assets/images/ml.jpg" alt="Machine Learning Project">
-        <div class="content">
-          <h3>Failure Prediction Model</h3>
-          <p>Machine learning model for predictive maintenance.</p>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<footer>
-© 2025 Sanket Kumar
-</footer>
-
-</body>
-</html>
