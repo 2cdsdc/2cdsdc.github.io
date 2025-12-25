@@ -2,40 +2,32 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sanket Kumar | Mechanical Portfolio</title>
+    <title>Projects | Sanket Kumar</title>
 </head>
 <body>
-
     <nav>
-        <div style="font-weight: 900; letter-spacing: 3px;">SANKET KUMAR</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <div style="font-weight: 900;">SANKET KUMAR</div>
+        <div class="nav-links"><a href="index.html">Home</a> <a href="projects.html">Projects</a></div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>MECHANICAL <br> ENGINEER.</h1>
-            <p>Recent graduate focused on high-precision CAD design, simulation testing, and data intelligence.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="https://linkedin.com" class="btn-outline">LinkedIn</a>
-                <a href="assets/resume.pdf" class="btn-outline">Resume</a>
+    <div style="padding-top: 100px;">
+        <div class="project-strip">
+            <img src="assets/images/cad-engine.jpg" alt="Engine">
+            <div class="project-info">
+                <span style="letter-spacing: 5px; color: var(--muted);">01 / CAD DESIGN</span>
+                <h2 style="font-size: 3rem; margin: 20px 0;">V6 RADIAL ENGINE</h2>
+                <a href="project/cad-engine.html" class="btn-outline">Learn More</a>
             </div>
         </div>
-        <div class="hero-image-wrapper">
-            <div class="hero-image-3d" id="tilt"></div>
-        </div>
-    </section>
 
-    <script>
-        const tilt = document.getElementById('tilt');
-        window.addEventListener('mousemove', (e) => {
-            let x = (window.innerWidth / 2 - e.pageX) / 40;
-            let y = (window.innerHeight / 2 - e.pageY) / 40;
-            tilt.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
-        });
-    </script>
+        <div class="project-strip">
+            <img src="assets/images/ansys.jpg" alt="Simulation">
+            <div class="project-info">
+                <span style="letter-spacing: 5px; color: var(--muted);">02 / SIMULATION</span>
+                <h2 style="font-size: 3rem; margin: 20px 0;">TRUSS STRESS ANALYSIS</h2>
+                <a href="project/simulation-truss.html" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
