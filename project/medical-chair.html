@@ -1,18 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Medical Chair with Integrated Heaters | Sanket Kumar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="CAD design and modification of a medical chair with integrated heating system for patient comfort. Designed in SolidWorks." />
+<title>Medical Chair with Integrated Heaters | Sanket Kumar</title>
 
-  <link rel="stylesheet" href="../assets/css/style.css">
+<meta name="description" content="CAD design and modification of a medical chair with integrated heating system for patient comfort.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+/* -------- PROJECT PAGE POLISH -------- */
+
+.project-hero {
+  padding: 120px 10% 60px;
+  text-align: center;
+  animation: fadeUp 0.9s ease;
+}
+
+.project-hero h1 {
+  font-size: clamp(2.3rem, 5vw, 3rem);
+  margin-bottom: 15px;
+}
+
+.project-hero p {
+  max-width: 850px;
+  margin: auto;
+  color: var(--text-dim);
+}
+
+.project-tags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.project-tags span {
+  background: rgba(79,156,249,0.12);
+  border: 1px solid rgba(79,156,249,0.35);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+/* -------- CONTENT -------- */
+
+.project-content {
+  padding: 60px 10%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+}
+
+.project-gallery {
+  display: grid;
+  gap: 20px;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.4s;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.project-details h2 {
+  margin-bottom: 15px;
+}
+
+.project-details p {
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.project-details ul {
+  padding-left: 18px;
+  margin-bottom: 25px;
+}
+
+.project-details li {
+  margin-bottom: 8px;
+  color: var(--text-dim);
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+}
+
+@media(max-width: 900px) {
+  .project-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
   <strong>Sanket Kumar</strong>
   <div>
@@ -23,22 +132,29 @@
   </div>
 </nav>
 
-<!-- PROJECT HEADER -->
+<!-- HERO -->
 <section class="project-hero">
-  <span class="project-tag cad">CAD PROJECT</span>
   <h1>Medical Chair with Integrated Heating System</h1>
-  <p class="project-subtitle">
-    CAD design and functional modification of a medical chair to integrate localized heating for enhanced patient comfort.
+  <p>
+    CAD design and functional modification of a medical chair incorporating
+    localized heating elements to improve patient comfort during extended use.
   </p>
+
+  <div class="project-tags">
+    <span>SolidWorks</span>
+    <span>CAD Design</span>
+    <span>Ergonomics</span>
+    <span>Medical Device</span>
+  </div>
 </section>
 
-<!-- PROJECT CONTENT -->
+<!-- CONTENT -->
 <section class="project-content">
 
   <!-- IMAGE GALLERY -->
   <div class="project-gallery">
-    <img src="../assets/images/medical-chair-1.png" alt="Medical chair CAD model - isometric view">
-    <img src="../assets/images/medical-chair-2.png" alt="Medical chair CAD model - front and side views">
+    <img src="../assets/images/medical-chair-1.png" alt="Medical Chair CAD - Isometric View">
+    <img src="../assets/images/medical-chair-2.png" alt="Medical Chair CAD - Side View">
   </div>
 
   <!-- DETAILS -->
@@ -46,49 +162,52 @@
 
     <h2>Project Overview</h2>
     <p>
-      This project focuses on the <strong>CAD modeling and functional modification</strong> of a medical chair designed for clinical environments.
-      The primary objective was to integrate a <strong>heating system</strong> within the chair to improve patient comfort during extended procedures.
+      This project involves the CAD modeling and modification of a medical chair
+      designed for clinical environments. The main objective was to integrate
+      heating elements within the chair structure while maintaining safety,
+      ergonomics, and structural integrity.
     </p>
 
     <h2>Key Design Features</h2>
     <ul>
-      <li>Ergonomically contoured seat, backrest, and leg support</li>
-      <li>Modular structure allowing easy maintenance and upgrades</li>
-      <li>Integrated heater zones positioned for patient comfort</li>
-      <li>Stable wheeled base for mobility within medical facilities</li>
-      <li>Storage drawers integrated into the base structure</li>
+      <li>Ergonomic seat, backrest, and leg support for patient comfort</li>
+      <li>Integrated heating zones positioned in critical contact areas</li>
+      <li>Stable wheeled base allowing mobility within medical facilities</li>
+      <li>Storage compartments integrated into the base structure</li>
+      <li>Design optimized for ease of cleaning and maintenance</li>
     </ul>
 
-    <h2>Tools & Technologies</h2>
+    <h2>Tools & Skills Used</h2>
     <div class="tech-stack">
       <span>SolidWorks</span>
-      <span>Surface Modeling</span>
-      <span>Parametric Design</span>
-      <span>Assembly Modeling</span>
-      <span>Design for Comfort</span>
+      <span>Parametric Modeling</span>
+      <span>Assembly Design</span>
+      <span>Product Modification</span>
+      <span>Ergonomic Design</span>
     </div>
 
     <h2>Engineering Considerations</h2>
     <p>
-      Special attention was given to maintaining <strong>structural integrity</strong> while introducing heaters into the chair assembly.
-      The design ensures that heating elements do not interfere with mechanical components, patient safety, or ease of cleaning.
+      Special care was taken to ensure that the heating elements did not interfere
+      with mechanical components or patient safety. The design balances comfort,
+      manufacturability, and reliability, making it suitable for real-world
+      medical applications.
     </p>
 
     <h2>Outcome</h2>
     <p>
-      The final CAD model successfully demonstrates a practical and manufacturable medical chair design that balances
-      <strong>comfort, functionality, and safety</strong>. The project highlights skills in mechanical design,
-      ergonomic modeling, and real-world product modification.
+      The final CAD model demonstrates a practical and well-integrated medical
+      chair design that enhances patient comfort through heating while preserving
+      structural robustness and clinical usability.
     </p>
 
   </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2025 Sanket Kumar · Mechanical Engineering Portfolio
 </footer>
 
 </body>
 </html>
-
