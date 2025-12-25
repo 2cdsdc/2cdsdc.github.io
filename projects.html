@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Projects | Sanket Kumar</title>
-
+<meta name="description" content="CAD, CAE, and Machine Learning projects by Mechanical Engineering student Sanket Kumar.">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -23,68 +22,59 @@
 
 <section class="section">
   <h1>Projects</h1>
-  <p>Selected CAD and CAE projects demonstrating mechanical design and simulation skills.</p>
-</section>
+  <p>Selected engineering projects demonstrating design, simulation, and analysis skills.</p>
 
-<!-- CAD PROJECTS -->
-<section class="section">
-  <h2>CAD Projects</h2>
-  <br>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+    <button class="filter-btn" onclick="filterProjects('cad')">CAD</button>
+    <button class="filter-btn" onclick="filterProjects('cae')">CAE</button>
+    <button class="filter-btn" onclick="filterProjects('ml')">ML</button>
+  </div>
 
   <div class="grid">
-    <a href="projects/cad-engine.html">
-      <div class="project-card">
-        <img src="assets/images/engine.jpg">
-        <div class="content">
-          <h3>V6 Engine Assembly</h3>
-          <p>Complete CAD assembly with motion study.</p>
-        </div>
-      </div>
-    </a>
 
-    <a href="projects/cad-gearbox.html">
-      <div class="project-card">
-        <img src="assets/images/gearbox.jpg">
-        <div class="content">
-          <h3>Gearbox Design</h3>
-          <p>Parametric gearbox modeling and assembly.</p>
-        </div>
+    <div class="project-card cad">
+      <img src="assets/images/engine.jpg">
+      <div class="content">
+        <h3>V6 Engine Assembly</h3>
+        <p>Parametric CAD design and motion validation.</p>
+        <a href="projects/engine.html">View Project →</a>
       </div>
-    </a>
+    </div>
+
+    <div class="project-card cae">
+      <img src="assets/images/truss.jpg">
+      <div class="content">
+        <h3>Truss Stress Analysis</h3>
+        <p>Structural FEA using ANSYS Workbench.</p>
+        <a href="projects/truss.html">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-card ml">
+      <img src="assets/images/ml.jpg">
+      <div class="content">
+        <h3>Failure Prediction Model</h3>
+        <p>Predictive maintenance using ML algorithms.</p>
+        <a href="projects/ml.html">View Project →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- CAE PROJECTS -->
-<section class="section">
-  <h2>CAE / Simulation Projects</h2>
-  <br>
+<footer>© 2025 Sanket Kumar</footer>
 
-  <div class="grid">
-    <a href="projects/cae-truss.html">
-      <div class="project-card">
-        <img src="assets/images/truss.jpg">
-        <div class="content">
-          <h3>Truss Stress Analysis</h3>
-          <p>Static structural FEA using ANSYS.</p>
-        </div>
-      </div>
-    </a>
+<script>
+function filterProjects(type) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
 
-    <a href="projects/cae-thermal.html">
-      <div class="project-card">
-        <img src="assets/images/thermal.jpg">
-        <div class="content">
-          <h3>Thermal Analysis</h3>
-          <p>Heat transfer and temperature distribution.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<footer>
-© 2025 Sanket Kumar
-</footer>
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.style.display = (type === 'all' || card.classList.contains(type)) ? 'block' : 'none';
+  });
+}
+</script>
 
 </body>
 </html>
