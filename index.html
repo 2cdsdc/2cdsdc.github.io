@@ -3,12 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sanket Kumar | Mechanical Engineering Portfolio</title>
+
+<meta name="description" content="Mechanical Engineering student portfolio featuring CAD, CAE, simulation and machine learning projects.">
+
 <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* HOME PAGE POLISH ONLY – DOES NOT CHANGE TEMPLATE */
+
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  max-width: 560px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 20px;
+}
+
+.hero img {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.feature-strip {
+  display: flex;
+  gap: 25px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: rgba(255,255,255,0.04);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.feature strong {
+  color: var(--accent);
+}
+</style>
+
 </head>
 
 <body>
 
+<!-- NAVIGATION (UNCHANGED) -->
 <nav>
   <strong>Sanket Kumar</strong>
   <div>
@@ -19,55 +72,76 @@
   </div>
 </nav>
 
-<section class="section hero">
+<!-- HERO SECTION (SAME STRUCTURE, BETTER VISUALS) -->
+<section class="section hero" style="position:relative;">
   <div>
     <h1>Mechanical Engineering Student</h1>
+
     <p>
-      Focused on CAD design, CAE simulation, and data-driven engineering
-      analysis using SolidWorks, ANSYS, MATLAB, and Python.
+      I design, analyze, and validate mechanical systems using
+      <b>CAD</b>, <b>CAE</b>, and <b>simulation-driven engineering</b>,
+      with experience in SolidWorks, ANSYS, MATLAB, and Python.
     </p>
+
+    <!-- SMALL HIGHLIGHT STRIP -->
+    <div class="feature-strip">
+      <div class="feature"><strong>CAD</strong> SolidWorks</div>
+      <div class="feature"><strong>CAE</strong> ANSYS</div>
+      <div class="feature"><strong>Analysis</strong> MATLAB</div>
+      <div class="feature"><strong>ML</strong> Python</div>
+    </div>
   </div>
 
-  <img src="assets/images/profile.jpg" alt="Sanket Kumar">
+  <!-- PROFILE IMAGE (UNCHANGED POSITION) -->
+  <img 
+    src="assets/images/profile.jpg"
+    alt="Sanket Kumar Mechanical Engineering Student"
+  >
 </section>
 
+<!-- FEATURED PROJECTS (UNCHANGED TEMPLATE) -->
 <section class="section">
-  <h2>Featured Projects</h2><br>
+  <h2>Featured Projects</h2>
+  <br>
 
   <div class="grid">
+
     <a href="projects/engine.html">
       <div class="project-card">
-        <img src="assets/images/engine.jpg">
+        <img src="assets/images/engine.jpg" alt="V6 Engine CAD Model">
         <div class="content">
           <h3>V6 Engine Assembly</h3>
-          <p>SolidWorks CAD assembly and motion study.</p>
+          <p>Parametric CAD modeling and motion study using SolidWorks.</p>
         </div>
       </div>
     </a>
 
     <a href="projects/truss.html">
       <div class="project-card">
-        <img src="assets/images/truss.jpg">
+        <img src="assets/images/truss.jpg" alt="Truss Stress Analysis">
         <div class="content">
           <h3>Truss Stress Analysis</h3>
-          <p>Structural FEA using ANSYS.</p>
+          <p>Structural FEA and factor of safety evaluation in ANSYS.</p>
         </div>
       </div>
     </a>
 
     <a href="projects/ml.html">
       <div class="project-card">
-        <img src="assets/images/ml.jpg">
+        <img src="assets/images/ml.jpg" alt="Machine Learning Project">
         <div class="content">
           <h3>Failure Prediction Model</h3>
-          <p>Machine learning for predictive maintenance.</p>
+          <p>Machine learning model for predictive maintenance.</p>
         </div>
       </div>
     </a>
+
   </div>
 </section>
 
-<footer>© 2025 Sanket Kumar</footer>
+<footer>
+© 2025 Sanket Kumar
+</footer>
 
 </body>
 </html>
