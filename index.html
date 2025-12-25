@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sanket Kumar | Aerospace & Mechanical Engineer</title>
+    <title>Sanket Kumar | Mechanical Engineer</title>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="logo">SANKET KUMAR</a>
+        <div class="logo">SANKET<span>.</span>K</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -17,36 +17,29 @@
     </nav>
 
     <section class="hero">
-        <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 15px;">Mechanical Engineer</p>
-        <h1>I'm Sanket Kumar. I design hardware and analyze systems to push the limits of innovation.</h1>
-        <p>Currently focused on bridging the gap between Mechanical CAD design and Data Science. Recent graduate with expertise in SolidWorks, Ansys, and ML.</p>
-        
-        <div class="social-links">
-            <a href="https://linkedin.com" class="btn-davis">LinkedIn</a>
-            <a href="projects.html" class="btn-davis">Projects</a>
-            <a href="assets/resume.pdf" class="btn-davis">Resume</a>
+        <div class="hero-content">
+            <h1>Engineering for <br> tomorrow's industry.</h1>
+            <p>I am a Mechanical Engineer specializing in precision CAD modeling, simulation testing, and data-driven intelligence.</p>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <a href="projects.html" class="btn-primary">View Portfolio</a>
+                <a href="assets/resume.pdf" style="color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--accent);">Download CV</a>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <div class="photo-card" id="tilt">
+                <img src="assets/images/profile.jpg" alt="Sanket Kumar" onerror="this.src='https://via.placeholder.com/400x500'">
+            </div>
         </div>
     </section>
 
-    <div class="project-strip">
-        <img src="assets/images/cad-bg.jpg" alt="CAD Engine">
-        <div class="project-content">
-            <h2>V6 Radial Engine</h2>
-            <a href="project/cad-engine.html" class="learn-more">Learn More</a>
-        </div>
-    </div>
-
-    <div class="project-strip">
-        <img src="assets/images/sim-bg.jpg" alt="Simulation">
-        <div class="project-content">
-            <h2>Ansys Simulation Analysis</h2>
-            <a href="project/simulation-truss.html" class="learn-more">Learn More</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Sanket Kumar. Built for Engineering Excellence.</p>
-    </footer>
-
+    <script>
+        const tilt = document.getElementById('tilt');
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 30;
+            const y = (window.innerHeight / 2 - e.pageY) / 30;
+            tilt.style.transform = `rotateY(${-x}deg) rotateX(${y}deg)`;
+        });
+    </script>
 </body>
 </html>
