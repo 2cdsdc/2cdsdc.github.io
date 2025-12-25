@@ -64,7 +64,7 @@
   box-shadow: 0 30px 70px rgba(0,0,0,0.45);
 }
 
-/* content sections */
+/* sections */
 .project-section {
   max-width: 900px;
   margin: 60px auto;
@@ -77,6 +77,18 @@
 .project-section p {
   color: #cbd5e1;
   line-height: 1.7;
+}
+
+/* video */
+.project-video {
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.project-video video {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
 }
 
 /* back link */
@@ -95,7 +107,8 @@
 /* entry animation */
 .project-hero,
 .project-section,
-.gallery {
+.gallery,
+.project-video {
   animation: fadeUp 0.7s ease both;
 }
 
@@ -142,6 +155,15 @@
   <img src="../assets/images/jet2.png" alt="Fighter Jet CAD Side View">
 </section>
 
+<!-- VIDEO -->
+<section class="project-video">
+  <h2>Model Visualization Video</h2>
+  <video controls>
+    <source src="../assets/videos/jet.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
 <!-- DESCRIPTION -->
 <section class="project-section">
   <h2>Project Overview</h2>
@@ -180,4 +202,3 @@
 
 </body>
 </html>
-
