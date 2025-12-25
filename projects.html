@@ -5,92 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Projects | Sanket Kumar</title>
-<meta name="description" content="Mechanical and Aerospace CAD projects by Sanket Kumar.">
+<meta name="description" content="CAD and Simulation projects by Mechanical Engineering student Sanket Kumar.">
 
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-.projects-header {
-  max-width: 1100px;
-  margin: auto;
-  padding: 50px 0 20px;
-}
-
-.projects-header h1 {
-  font-size: clamp(2.2rem, 5vw, 3rem);
-}
-
-.projects-header p {
-  color: #cbd5e1;
-  max-width: 700px;
-}
-
-.projects-grid {
-  max-width: 1100px;
-  margin: 50px auto 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-}
-
-.project-card {
-  background: rgba(255,255,255,0.03);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 35px 80px rgba(0,0,0,0.5);
-}
-
-.project-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.project-content {
-  padding: 22px;
-}
-
-.project-content h3 {
-  margin-bottom: 10px;
-}
-
-.project-content p {
-  color: #cbd5e1;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.tools {
+/* ---------- FILTER TABS ---------- */
+.filter-tabs {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  margin: 40px 0;
   flex-wrap: wrap;
-  margin-bottom: 18px;
 }
 
-.tools span {
-  font-size: 0.75rem;
-  padding: 6px 12px;
-  border-radius: 999px;
+.filter-btn {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.85rem;
+}
+
+.filter-btn i {
+  margin-right: 8px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(79,156,249,0.1);
+}
+
+/* ---------- PROJECT TAG COLOR ---------- */
+.tag-cad {
   background: rgba(79,156,249,0.15);
   color: var(--accent);
-  font-weight: 600;
 }
 
-.project-content a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.project-content a:hover {
-  text-decoration: underline;
+.tag-cae {
+  background: rgba(34,197,94,0.15);
+  color: #22c55e;
 }
 </style>
 
@@ -103,124 +62,133 @@
   <strong>Sanket Kumar</strong>
   <div>
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" class="active">Projects</a>
     <a href="contact.html">Contact</a>
     <a href="assets/resume.pdf" target="_blank">Resume</a>
   </div>
 </nav>
 
-<!-- HEADER -->
-<section class="projects-header section">
+<section class="section">
+
   <h1>Projects</h1>
   <p>
-    A selection of real engineering projects demonstrating my skills in
-    CAD design, surface modeling, and aerospace mechanical assemblies.
+    Selected CAD design and engineering simulation projects demonstrating
+    mechanical design, surfacing, and CAE analysis skills.
   </p>
-</section>
 
-<!-- PROJECTS GRID -->
-<section class="projects-grid">
-
-  <!-- ABB ROBOT ARM -->
-  <div class="project-card">
-    <img src="assets/images/abb1.png" alt="ABB Robot Arm CAD Model">
-    <div class="project-content">
-      <h3>ABB Robot Arm</h3>
-      <p>
-        Industrial robotic arm CAD assembly focusing on joint mechanisms,
-        structural design, and manufacturable components.
-      </p>
-      <div class="tools">
-        <span>SolidWorks</span>
-        <span>CAD Assembly</span>
-        <span>Mechanical Design</span>
-      </div>
-      <a href="project/abb-robot-arm.html">View Project →</a>
-    </div>
+  <!-- FILTER TABS -->
+  <div class="filter-tabs">
+    <button class="filter-btn active" onclick="filterProjects('all')">
+      <i class="fa-solid fa-layer-group"></i> All
+    </button>
+    <button class="filter-btn" onclick="filterProjects('cad')">
+      <i class="fa-solid fa-cube"></i> CAD
+    </button>
+    <button class="filter-btn" onclick="filterProjects('cae')">
+      <i class="fa-solid fa-chart-line"></i> Simulation
+    </button>
   </div>
 
-  <!-- FIGHTER JET SURFACE MODEL -->
-  <div class="project-card">
-    <img src="assets/images/jet1.png" alt="Fighter Jet Surface CAD Model">
-    <div class="project-content">
-      <h3>Fighter Jet – Surface CAD Model</h3>
-      <p>
-        High-fidelity surface modeling of a fighter aircraft emphasizing
-        aerodynamic form and smooth curvature continuity.
-      </p>
-      <div class="tools">
-        <span>SolidWorks</span>
-        <span>Surface Modeling</span>
-        <span>Aerospace CAD</span>
-      </div>
-      <a href="project/fighter-jet.html">View Project →</a>
-    </div>
-  </div>
+  <div class="grid">
 
-  <!-- FIGHTER JET ENGINE -->
-  <div class="project-card">
-    <img src="assets/images/engine1.png" alt="Fighter Jet Engine CAD Model">
-    <div class="project-content">
-      <h3>Fighter Jet Engine CAD Model</h3>
-      <p>
-        Detailed CAD assembly of a fighter jet engine including internal
-        compressor stages, turbine components, and cut-section views.
-      </p>
-      <div class="tools">
-        <span>SolidWorks</span>
-        <span>Engine Design</span>
-        <span>Aerospace</span>
-      </div>
-      <a href="project/fighter-jet-engine.html">View Project →</a>
-    </div>
-  </div>
+    <!-- ================= CAD PROJECTS ================= -->
 
-<!-- SPORTS CAR -->
+    <div class="project-card cad">
+      <img src="assets/images/abb/abb1.png" alt="ABB Robot Arm CAD">
+      <div class="content">
+        <h3><i class="fa-solid fa-robot"></i> ABB Robot Arm</h3>
+        <p>Industrial robotic arm CAD assembly with joint mechanisms.</p>
+        <div class="project-tags">
+          <span class="tag-cad">SolidWorks</span>
+          <span class="tag-cad">CAD Assembly</span>
+          <span class="tag-cad">Robotics</span>
+        </div>
+        <a href="project/abb-robot-arm.html">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-card cad">
+      <img src="assets/images/fighter-jet/jet1.png" alt="Fighter Jet Surface CAD">
+      <div class="content">
+        <h3><i class="fa-solid fa-jet-fighter"></i> Fighter Jet – Surface Model</h3>
+        <p>Advanced surface modeling of a fighter aircraft.</p>
+        <div class="project-tags">
+          <span class="tag-cad">SolidWorks</span>
+          <span class="tag-cad">Surface Modeling</span>
+          <span class="tag-cad">Aerospace</span>
+        </div>
+        <a href="project/fighter-jet.html">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-card cad">
+      <img src="assets/images/fighter-engine/engine1.png" alt="Jet Engine CAD">
+      <div class="content">
+        <h3><i class="fa-solid fa-gears"></i> Fighter Jet Engine</h3>
+        <p>Detailed CAD model of jet engine internals with cut sections.</p>
+        <div class="project-tags">
+          <span class="tag-cad">SolidWorks</span>
+          <span class="tag-cad">Engine Design</span>
+          <span class="tag-cad">Aerospace</span>
+        </div>
+        <a href="project/fighter-jet-engine.html">View Project →</a>
+      </div>
+    </div>
+
     <div class="project-card cad">
       <img src="assets/images/sports-car/car1.png" alt="Sports Car CAD">
-
       <div class="content">
-        <h3>Sports Car – Surface Model</h3>
-        <p>Automotive surface CAD focused on styling, aerodynamics and realism.</p>
-
+        <h3><i class="fa-solid fa-car"></i> Sports Car – Surface CAD</h3>
+        <p>Automotive surface CAD focused on styling and aerodynamics.</p>
         <div class="project-tags">
-          <span>SolidWorks</span>
-          <span>Surface Modeling</span>
-          <span>Automotive CAD</span>
+          <span class="tag-cad">SolidWorks</span>
+          <span class="tag-cad">Surface Modeling</span>
+          <span class="tag-cad">Automotive</span>
         </div>
-
         <a href="project/sports-car.html">View Project →</a>
       </div>
     </div>
 
-  <div class="grid">
+    <!-- ================= CAE PROJECT ================= -->
 
-    <!-- LASER CUT SIMULATION -->
-    <div class="project-card">
+    <div class="project-card cae">
       <div class="content">
-        <h3>Coupled Thermal–Structural Analysis of Laser Cutting</h3>
+        <h3><i class="fa-solid fa-temperature-high"></i> Laser Cutting – Coupled Thermal & Structural</h3>
         <p>
-          Transient CAE study evaluating temperature evolution and
-          stress response during laser cutting of structural steel.
+          Transient CAE analysis evaluating temperature and stress response
+          during laser cutting using ANSYS.
         </p>
-
         <div class="project-tags">
-          <span>ANSYS 2024 R1</span>
-          <span>Transient Thermal</span>
-          <span>Structural</span>
-          <span>Mechanical APDL</span>
+          <span class="tag-cae">ANSYS 2024 R1</span>
+          <span class="tag-cae">Transient Thermal</span>
+          <span class="tag-cae">Structural</span>
+          <span class="tag-cae">APDL</span>
         </div>
-
         <a href="project/laser-cut-thermal-structural.html">View Project →</a>
       </div>
     </div>
 
-</div>
-
-
+  </div>
 </section>
 
-<footer>© 2025 Sanket Kumar</footer>
+<footer>
+  © 2025 Sanket Kumar
+</footer>
+
+<script>
+function filterProjects(type) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.closest('.filter-btn').classList.add('active');
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    if (type === 'all' || card.classList.contains(type)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
 
 </body>
 </html>
