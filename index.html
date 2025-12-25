@@ -1,354 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sanket Kumar | Mechanical Engineering Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-<style>
-:root {
-  --bg: #050505;
-  --accent: #8b5cf6;
-  --card: #111111;
-  --text: #ffffff;
-  --text-dim: #94a3b8;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Outfit', sans-serif;
-  scroll-behavior: smooth;
-}
-
-/* NAV */
-nav {
-  padding: 25px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.logo {
-  font-family: 'Syne';
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: var(--accent);
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
-  gap: 60px;
-}
-
-.hero-content {
-  flex: 1.2;
-}
-
-.hero-content h1 {
-  font-family: 'Syne';
-  font-size: clamp(2.8rem, 6vw, 4.2rem);
-  line-height: 1.05;
-  margin-bottom: 25px;
-}
-
-.hero-content p {
-  color: var(--text-dim);
-  font-size: 1.05rem;
-  margin-bottom: 35px;
-  max-width: 560px;
-  line-height: 1.6;
-}
-
-.btn-group {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.resume-link {
-  padding: 14px 28px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-weight: 700;
-  font-family: 'Syne';
-  transition: 0.3s;
-}
-
-.resume-link:hover {
-  transform: translateY(-3px);
-}
-
-.social-links {
-  display: flex;
-  gap: 12px;
-}
-
-.icon-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: var(--card);
-  border: 1px solid rgba(255,255,255,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.icon-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* IMAGE */
-.hero-img {
-  flex: 0.8;
-  display: flex;
-  justify-content: center;
-}
-
-.profile-card {
-  width: 100%;
-  max-width: 360px;
-  aspect-ratio: 1 / 1.25;
-  background: var(--card);
-  border-radius: 32px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.profile-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* FILTER */
-.filter-section {
-  padding: 80px 10% 30px;
-}
-
-.filter-section h2 {
-  font-family: 'Syne';
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-}
-
-.filter-tabs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.tab {
-  background: transparent;
-  border: 1px solid #222;
-  color: var(--text-dim);
-  padding: 10px 22px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-family: 'JetBrains Mono';
-  font-size: 0.8rem;
-  transition: 0.3s;
-}
-
-.tab.active,
-.tab:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* PROJECTS */
-.projects-grid {
-  padding: 0 10% 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 25px;
-}
-
-.project-card {
-  background: var(--card);
-  border-radius: 24px;
-  padding: 30px;
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--accent);
-}
-
-.domain {
-  font-family: 'JetBrains Mono';
-  font-size: 0.7rem;
-  color: var(--accent);
-  margin-bottom: 12px;
-  display: block;
-}
-
-.project-card h3 {
-  font-family: 'Syne';
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-}
-
-.project-card p {
-  color: var(--text-dim);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* FOOTER */
-footer {
-  padding: 60px;
-  text-align: center;
-  border-top: 1px solid #111;
-  color: var(--text-dim);
-  font-size: 0.8rem;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 140px;
-  }
-
-  .btn-group {
-    justify-content: center;
-  }
-}
-</style>
+<title>Sanket Kumar | Mechanical Engineer</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
 <nav>
-  <div class="logo">SANKET.K</div>
-  <div style="font-family: 'JetBrains Mono'; font-size: 0.7rem; color: var(--text-dim);">
-    Mechanical Engineering Student
+  <strong>Sanket Kumar</strong>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="assets/resume.pdf" target="_blank">Resume</a>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Mechanical Engineering<br>Portfolio</h1>
-    <p>
-      Mechanical Engineering student focused on CAD design, simulation,
-      and engineering analysis using SolidWorks, ANSYS, MATLAB, and Python.
-    </p>
+<section class="section">
+  <div class="grid">
+    <div>
+      <h1>Mechanical Engineering Student</h1>
+      <p>CAD • CAE • Simulation • Machine Learning</p>
+      <p>
+        Focused on design, analysis, and data-driven engineering solutions.
+      </p>
 
-    <div class="btn-group">
-      <a href="YOUR_RESUME_LINK.pdf" class="resume-link">Download Resume</a>
+      <p>
+        📧 sanketku231@gmail.com<br>
+        📱 +91 7895356317
+      </p>
 
-      <div class="social-links">
-        <a href="https://linkedin.com/in/YOUR_USERNAME" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/YOUR_USERNAME" class="icon-btn"><i class="fab fa-github"></i></a>
-      </div>
+      <p>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </p>
     </div>
-  </div>
 
-  <div class="hero-img">
-    <div class="profile-card">
-      <img src="profile.jpg" alt="Sanket Kumar"
-           onerror="this.src='https://via.placeholder.com/400x500/111111/8b5cf6?text=Sanket+Kumar'">
-    </div>
+    <img src="assets/images/profile.jpg" style="width:100%; border-radius:20px;">
   </div>
 </section>
-
-<div class="filter-section">
-  <h2>Selected Work</h2>
-  <div class="filter-tabs">
-    <button class="tab active" onclick="filterProjects('all', this)">ALL</button>
-    <button class="tab" onclick="filterProjects('mech', this)">MECHANICAL</button>
-    <button class="tab" onclick="filterProjects('data', this)">DATA</button>
-    <button class="tab" onclick="filterProjects('matlab', this)">MATLAB</button>
-  </div>
-</div>
-
-<section class="projects-grid">
-  <div class="project-card" data-cat="mech">
-    <span class="domain">// MECHANICAL DESIGN</span>
-    <h3>V6 Engine Assembly</h3>
-    <p>Complete engine assembly with motion study and interference checks.</p>
-  </div>
-
-  <div class="project-card" data-cat="mech">
-    <span class="domain">// SIMULATION</span>
-    <h3>Bridge Frame Stress Analysis</h3>
-    <p>Structural FEA in ANSYS achieving a factor of safety of 2.4.</p>
-  </div>
-
-  <div class="project-card" data-cat="data">
-    <span class="domain">// DATA SCIENCE</span>
-    <h3>Failure Prediction Model</h3>
-    <p>Machine learning model to predict mechanical failures using sensor data.</p>
-  </div>
-
-  <div class="project-card" data-cat="matlab">
-    <span class="domain">// COMPUTATIONAL</span>
-    <h3>PID Control System</h3>
-    <p>MATLAB/Simulink-based controller for autonomous system stabilization.</p>
-  </div>
-</section>
-
-<footer>
-  © 2025 Sanket Kumar — Mechanical Engineering Portfolio
-</footer>
-
-<script>
-function filterProjects(category, button) {
-  const cards = document.querySelectorAll('.project-card');
-  const tabs = document.querySelectorAll('.tab');
-
-  tabs.forEach(t => t.classList.remove('active'));
-  button.classList.add('active');
-
-  cards.forEach(card => {
-    if (category === 'all' || card.getAttribute('data-cat') === category) {
-      card.style.display = 'block';
-      card.style.animation = 'fadeIn 0.4s ease';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-</script>
 
 </body>
 </html>
