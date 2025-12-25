@@ -1,21 +1,31 @@
-/* ---------- RESET & BASE ---------- */
+/* =====================================================
+   COMPLETE STYLE.CSS — COPY & PASTE EVERYTHING
+   ===================================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ---------- COLORS ---------- */
 :root {
   --primary: #2563eb;
   --dark: #0f172a;
   --gray: #475569;
-  --light: #f8fafc;
+
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;
+  --bg-gray: #f1f5f9;
+  --bg-blue: #eef2ff;
+
   --border: #e5e7eb;
 }
 
+/* ---------- BASE ---------- */
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-white);
   color: var(--dark);
   line-height: 1.7;
 }
@@ -24,8 +34,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: white;
-  z-index: 100;
+  background: var(--bg-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,15 +43,14 @@ body {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .navbar a {
-  margin-left: 24px;
+  margin-left: 20px;
   text-decoration: none;
   color: var(--gray);
-  font-weight: 500;
 }
 
 .navbar a:hover {
@@ -51,120 +59,110 @@ body {
 
 /* ---------- HERO ---------- */
 .hero {
-  padding: 120px 10% 100px;
+  padding: 100px 10%;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  background: var(--bg-white);
 }
 
 .hero h1 {
-  font-size: clamp(2.3rem, 5vw, 3.2rem);
-  font-weight: 800;
+  font-size: 42px;
 }
 
 .tagline {
-  margin-top: 14px;
+  margin-top: 10px;
+  font-weight: bold;
   color: var(--primary);
-  font-weight: 600;
 }
 
 .subtitle {
-  margin: 20px auto 0;
-  max-width: 720px;
+  margin-top: 15px;
   color: var(--gray);
-  font-size: 1.05rem;
 }
 
 /* ---------- BUTTONS ---------- */
 .buttons {
-  margin-top: 36px;
+  margin-top: 30px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 8px;
+  padding: 12px 24px;
   background: var(--primary);
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  margin: 0 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+  border-radius: 6px;
+  margin: 5px;
+  display: inline-block;
 }
 
 .btn.secondary {
-  background: white;
+  background: var(--bg-light);
   color: var(--dark);
   border: 1px solid var(--border);
 }
 
 /* ---------- SECTIONS ---------- */
 .section {
-  padding: 90px 10%;
+  padding: 80px 10%;
+  border-top: 1px solid var(--border);
+}
+
+/* DIFFERENT BACKGROUND COLORS */
+#projects {
+  background: var(--bg-white);
+}
+
+#about {
+  background: var(--bg-gray);
+}
+
+#services {
+  background: var(--bg-blue);
+}
+
+#contact {
+  background: var(--bg-gray);
 }
 
 .section.light {
-  background: var(--light);
+  background: var(--bg-light);
 }
 
 .section h2 {
-  font-size: 2rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-/* ---------- PROJECT GRID ---------- */
+/* ---------- PROJECTS ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
 .card {
-  background: white;
+  background: var(--bg-white);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 30px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  padding: 25px;
 }
 
 .card h3 {
-  margin-bottom: 12px;
-  font-size: 1.15rem;
-}
-
-.card p {
-  color: var(--gray);
-  font-size: 0.95rem;
+  margin-bottom: 10px;
 }
 
 .card span {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 0.85rem;
-  font-weight: 600;
   color: var(--primary);
+  font-size: 14px;
 }
 
 /* ---------- SERVICES ---------- */
 .services {
   list-style: none;
-  max-width: 600px;
-  margin: auto;
   text-align: center;
 }
 
 .services li {
-  padding: 10px 0;
+  margin: 10px 0;
   color: var(--gray);
 }
 
@@ -179,45 +177,37 @@ blockquote {
 
 blockquote span {
   display: block;
-  margin-top: 14px;
-  font-weight: 600;
+  margin-top: 10px;
+  font-weight: bold;
   color: var(--dark);
 }
 
 /* ---------- CONTACT ---------- */
 #contact p {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 #contact a {
   color: var(--primary);
   text-decoration: none;
-  font-weight: 500;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
   background: var(--dark);
-  color: #cbd5f5;
+  color: white;
   text-align: center;
-  padding: 40px 10%;
-  margin-top: 80px;
+  padding: 30px;
 }
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    gap: 10px;
   }
 
-  .hero {
-    padding: 90px 7%;
-  }
-
-  .section {
-    padding: 70px 7%;
+  .hero h1 {
+    font-size: 30px;
   }
 }
-
