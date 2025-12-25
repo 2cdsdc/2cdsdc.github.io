@@ -1,248 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanket Kumar | Engineering Workstation</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ui-blue: #00d4ff;
-            --ui-grid: rgba(0, 212, 255, 0.07);
-            --bg: #050a10;
-            --sidebar-bg: rgba(10, 20, 30, 0.8);
-            --panel-border: rgba(0, 212, 255, 0.2);
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sanket Kumar | Engineering Workstation</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--bg);
-            background-image: 
-                linear-gradient(var(--ui-grid) 1px, transparent 1px),
-                linear-gradient(90deg, var(--ui-grid) 1px, transparent 1px);
-            background-size: 40px 40px;
-            color: #c2d1d9;
-            font-family: 'JetBrains Mono', monospace;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
+<!-- THREE.JS -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/controls/OrbitControls.js"></script>
 
-        /* --- FEATURE TREE SIDEBAR --- */
-        #sidebar {
-            width: 280px;
-            background: var(--sidebar-bg);
-            border-right: 1px solid var(--panel-border);
-            backdrop-filter: blur(10px);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            z-index: 100;
-        }
+<style>
+:root {
+  --ui-blue: #00d4ff;
+  --ui-grid: rgba(0, 212, 255, 0.07);
+  --bg: #050a10;
+  --sidebar-bg: rgba(10, 20, 30, 0.8);
+  --panel-border: rgba(0, 212, 255, 0.2);
+}
 
-        .tree-header {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.8rem;
-            color: var(--ui-blue);
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--ui-blue);
-            padding-bottom: 10px;
-        }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .tree-item {
-            padding: 8px 10px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--ui-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ui-grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #c2d1d9;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
 
-        .tree-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--ui-blue);
-        }
+/* SIDEBAR */
+#sidebar {
+  width: 280px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--panel-border);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
 
-        .tree-item::before {
-            content: '▹';
-            color: var(--ui-blue);
-        }
+.tree-header {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  color: var(--ui-blue);
+  border-bottom: 1px solid var(--ui-blue);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
 
-        /* --- MAIN VIEWPORT --- */
-        main {
-            flex: 1;
-            position: relative;
-            padding: 40px;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-        }
+.tree-item {
+  padding: 8px 10px;
+  cursor: pointer;
+}
 
-        /* Technical Drawing Header */
-        .viewport-header {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            text-align: right;
-            border-right: 3px solid var(--ui-blue);
-            padding-right: 15px;
-        }
+.tree-item::before {
+  content: "▹ ";
+  color: var(--ui-blue);
+}
 
-        .viewport-header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: #fff;
-        }
+/* MAIN */
+main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
 
-        /* PROJECT CARDS: "Technical Drawing" Style */
-        .project-container {
-            margin-top: 100px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 80px;
-        }
+.viewport-header {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  border-right: 3px solid var(--ui-blue);
+  padding-right: 15px;
+  text-align: right;
+}
 
-        .project-card {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            opacity: 0.8;
-            transition: 0.5s;
-        }
+.viewport-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
 
-        .project-card:hover { opacity: 1; }
+/* PROJECT */
+.project-container {
+  margin-top: 120px;
+  display: grid;
+  gap: 80px;
+}
 
-        .viz-box {
-            width: 500px;
-            height: 300px;
-            border: 1px solid var(--panel-border);
-            position: relative;
-            background: rgba(255,255,255,0.02);
-            overflow: hidden;
-        }
+.project-card {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
 
-        /* FEA Heatmap Simulation Simulation overlay effect */
-        .viz-box::after {
-            content: "";
-            position: absolute;
-            top: 0; left: -100%;
-            width: 50%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
-            animation: scan 3s infinite linear;
-        }
+.viz-box {
+  width: 520px;
+  height: 320px;
+  border: 1px solid var(--panel-border);
+  position: relative;
+}
 
-        @keyframes scan {
-            to { left: 150%; }
-        }
+.project-details h2 {
+  color: var(--ui-blue);
+  font-family: 'Orbitron', sans-serif;
+}
 
-        .project-details h2 {
-            color: var(--ui-blue);
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 15px;
-        }
+.spec-list {
+  list-style: none;
+  padding-left: 15px;
+  border-left: 2px solid rgba(255,255,255,0.1);
+}
 
-        .spec-list {
-            list-style: none;
-            font-size: 0.9rem;
-            border-left: 2px solid rgba(255,255,255,0.1);
-            padding-left: 15px;
-        }
+.spec-list span {
+  color: var(--ui-blue);
+}
 
-        .spec-list li span { color: var(--ui-blue); }
-
-        /* Coordinate Axes (The Widget) */
-        #axes {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            width: 80px;
-            height: 80px;
-            opacity: 0.6;
-        }
-
-        /* --- COMMAND LINE --- */
-        .console {
-            position: fixed;
-            bottom: 0;
-            left: 280px;
-            right: 0;
-            background: #000;
-            padding: 5px 20px;
-            font-size: 0.75rem;
-            color: #00ff00;
-            border-top: 1px solid var(--panel-border);
-        }
-
-    </style>
+/* CONSOLE */
+.console {
+  position: fixed;
+  bottom: 0;
+  left: 280px;
+  right: 0;
+  background: black;
+  color: #00ff00;
+  font-size: 0.75rem;
+  padding: 6px 20px;
+}
+</style>
 </head>
+
 <body>
 
-    <aside id="sidebar">
-        <div class="tree-header">SANKET_KUMAR.PRT</div>
-        <div class="tree-item">Profile_Summary</div>
-        <div class="tree-item">Mechanical_Skills</div>
-        <div class="tree-item">CAD_History</div>
-        <div style="margin-top: 20px;" class="tree-header">ASSEMBLIES</div>
-        <div class="tree-item">Engine_Assembly.SLDASM</div>
-        <div class="tree-item">Structural_Frame.ANSYS</div>
-        <div class="tree-item">Thermal_Sink.CFD</div>
-    </aside>
+<aside id="sidebar">
+  <div class="tree-header">SANKET_KUMAR.PRT</div>
+  <div class="tree-item">Profile_Summary</div>
+  <div class="tree-item">Mechanical_Skills</div>
+  <div class="tree-item">CAD_History</div>
+</aside>
 
-    <main>
-        <div class="viewport-header">
-            <h1>SANKET KUMAR</h1>
-            <p>DESIGN & SIMULATION ENGINEER</p>
-            <p style="font-size: 0.7rem;">STATUS: READY // 2025_REF_IND</p>
-        </div>
+<main>
+  <div class="viewport-header">
+    <h1>SANKET KUMAR</h1>
+    <p>DESIGN & SIMULATION ENGINEER</p>
+  </div>
 
-        <div class="project-container">
-            <div class="project-card">
-                <div class="viz-box">
-                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=500" style="width:100%; height:100%; object-fit:cover; filter: grayscale(1) contrast(1.2);">
-                    <div style="position:absolute; bottom:10px; left:10px; font-size:10px; color:var(--ui-blue);">MODEL_VIEW: ISO</div>
-                </div>
-                <div class="project-details">
-                    <h2>V6_ENGINE_UNIT</h2>
-                    <ul class="spec-list">
-                        <li><span>TOOL:</span> SOLIDWORKS 2024</li>
-                        <li><span>PARTS:</span> 140+ Individual Components</li>
-                        <li><span>ANALYSIS:</span> Dynamic Motion Simulation</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="project-container">
 
-            <div class="project-card">
-                <div class="viz-box">
-                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=500" style="width:100%; height:100%; object-fit:cover; filter: hue-rotate(180deg);">
-                    <div style="position:absolute; bottom:10px; left:10px; font-size:10px; color:var(--ui-blue);">MODE: FEA_STRESS_MAP</div>
-                </div>
-                <div class="project-details">
-                    <h2>TRUSS_STATIC_LOAD</h2>
-                    <ul class="spec-list">
-                        <li><span>TOOL:</span> ANSYS WORKBENCH</li>
-                        <li><span>LOAD:</span> 500kN Distributed</li>
-                        <li><span>RESULT:</span> FOS 2.4 Achieved</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <div class="console">
-        > SYSTEM_READY: DISCOVERING MECHANICAL INNOVATIONS... | [X: 0.00 Y: 0.00 Z: 1.00]
+    <!-- 3D PROJECT -->
+    <div class="project-card">
+      <div class="viz-box" id="three-container"></div>
+      <div class="project-details">
+        <h2>PARAMETRIC_SHAFT_MODEL</h2>
+        <ul class="spec-list">
+          <li><span>MODE:</span> 3D_WEBGL_PREVIEW</li>
+          <li><span>MATERIAL:</span> STEEL</li>
+          <li><span>INTERACTION:</span> ROTATE / ZOOM</li>
+        </ul>
+      </div>
     </div>
 
-    <div id="axes">
-        <svg viewBox="0 0 100 100">
-            <line x1="50" y1="50" x2="90" y2="50" stroke="red" stroke-width="2"/>
-            <text x="92" y="55" fill="red" font-size="10">X</text>
-            <line x1="50" y1="50" x2="50" y2="10" stroke="green" stroke-width="2"/>
-            <text x="48" y="8" fill="green" font-size="10">Y</text>
-            <line x1="50" y1="50" x2="30" y2="70" stroke="blue" stroke-width="2"/>
-            <text x="25" y="75" fill="blue" font-size="10">Z</text>
-        </svg>
-    </div>
+  </div>
+</main>
+
+<div class="console">
+  > SYSTEM_READY: WEBGL_CONTEXT_ACTIVE | ORBIT_CONTROLS_ENABLED
+</div>
+
+<!-- THREE.JS SCRIPT -->
+<script>
+const container = document.getElementById("three-container");
+
+// Scene
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x050a10);
+
+// Camera
+const camera = new THREE.PerspectiveCamera(
+  45,
+  container.clientWidth / container.clientHeight,
+  0.1,
+  1000
+);
+camera.position.set(4, 3, 6);
+
+// Renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
+
+// Controls
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+// Lights
+scene.add(new THREE.AmbientLight(0x00d4ff, 0.4));
+const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+dirLight.position.set(5, 10, 7);
+scene.add(dirLight);
+
+// Geometry (Mechanical Shaft)
+const geometry = new THREE.CylinderGeometry(0.8, 0.8, 3, 64);
+const material = new THREE.MeshStandardMaterial({
+  color: 0xaaaaaa,
+  metalness: 0.8,
+  roughness: 0.3
+});
+const shaft = new THREE.Mesh(geometry, material);
+scene.add(shaft);
+
+// Animation loop
+function animate() {
+  requestAnimationFrame(animate);
+  shaft.rotation.y += 0.005;
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+
+// Resize
+window.addEventListener("resize", () => {
+  camera.aspect = container.clientWidth / container.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(container.clientWidth, container.clientHeight);
+});
+</script>
 
 </body>
 </html>
+
