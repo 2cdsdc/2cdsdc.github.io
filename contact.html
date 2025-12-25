@@ -1,36 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contact | Sanket Kumar</title>
+
+<meta name="description" content="Contact Sanket Kumar – Mechanical Engineering student specializing in CAD, CAE, and simulation.">
+
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ===== CONTACT PAGE POLISH ===== */
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+/* Left info panel */
+.contact-info {
+  background: linear-gradient(
+    135deg,
+    rgba(79,156,249,0.12),
+    rgba(18,26,47,0.95)
+  );
+  padding: 40px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-info h2 {
+  margin-bottom: 18px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  margin: 18px 0;
+  align-items: center;
+  color: var(--muted);
+}
+
+.contact-item i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  width: 24px;
+}
+
+/* Socials */
+.contact-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.contact-socials a {
+  font-size: 1.3rem;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.contact-socials a:hover {
+  color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* Form panel */
+.contact-form {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-form h2 {
+  margin-bottom: 18px;
+}
+
+.contact-form p {
+  margin-bottom: 25px;
+}
+
+/* Button animation */
+.contact-form button {
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79,156,249,0.35);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
+
 <body>
 
+<!-- NAV -->
 <nav>
   <strong>Sanket Kumar</strong>
   <div>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
+    <a href="assets/resume.pdf" target="_blank">Resume</a>
   </div>
 </nav>
 
+<!-- CONTACT SECTION -->
 <section class="section">
-  <h2>Contact</h2>
 
-  <p>
-    📧 sanketku231@gmail.com<br>
-    📱 +91 7895356317
-  </p>
+  <h1>Contact</h1>
+  <p>If you would like to discuss opportunities, projects, or collaborations, feel free to reach out.</p>
 
-  <form action="https://formspree.io/f/xyzzabcd" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-wrapper">
+
+    <!-- LEFT: CONTACT INFO -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>sanketku231@gmail.com</span>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 7895356317</span>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-location-dot"></i>
+        <span>India</span>
+      </div>
+
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <p>Leave your details and I’ll get back to you.</p>
+
+      <!-- FORM (STATIC – works with Formspree / Netlify later) -->
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone (optional)">
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+
 </section>
 
-<footer>© Sanket Kumar</footer>
+<footer>
+© 2025 Sanket Kumar
+</footer>
+
 </body>
 </html>
