@@ -3,43 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sanket Kumar | Mechanical Engineer</title>
+    <title>Sanket Kumar | Identity</title>
 </head>
 <body>
 
     <nav>
-        <div class="logo">SANKET<span>.</span>K</div>
+        <div style="font-weight: 800;">SK.</div>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="contact.html">CONTACT</a>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Engineering for <br> tomorrow's industry.</h1>
-            <p>I am a Mechanical Engineer specializing in precision CAD modeling, simulation testing, and data-driven intelligence.</p>
-            <div style="display: flex; gap: 20px; align-items: center;">
-                <a href="projects.html" class="btn-primary">View Portfolio</a>
-                <a href="assets/resume.pdf" style="color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--accent);">Download CV</a>
+    <div class="split-hero">
+        <div class="hero-left">
+            <span style="color: var(--accent); font-weight: 800; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 20px;">MECHANICAL & DATA ENGINEER</span>
+            <h1 style="font-size: 4.5rem; line-height: 1; margin-bottom: 30px; font-weight: 800;">Sanket <br> Kumar.</h1>
+            <p style="color: #64748b; font-size: 1.1rem; max-width: 450px; margin-bottom: 40px;">
+                Specializing in the intersection of physical design and digital intelligence. Delivering precision-led engineering solutions.
+            </p>
+            <div style="display: flex; gap: 30px;">
+                <a href="assets/resume.pdf" style="text-decoration: none; color: var(--text); font-weight: 700; border-bottom: 3px solid var(--accent);">VIEW RESUME</a>
+                <a href="contact.html" style="text-decoration: none; color: #94a3b8; font-weight: 700;">GET IN TOUCH</a>
             </div>
         </div>
-
-        <div class="photo-wrapper">
-            <div class="photo-card" id="tilt">
-                <img src="assets/images/profile.jpg" alt="Sanket Kumar" onerror="this.src='https://via.placeholder.com/400x500'">
+        <div class="hero-right">
+            <img src="assets/images/profile.jpg" alt="Sanket Kumar" onerror="this.src='https://via.placeholder.com/800x1000'">
+            <div style="position: absolute; bottom: 40px; left: 40px; color: white; opacity: 0.5; font-size: 0.7rem; letter-spacing: 2px;">
+                © 2025 // 26° N, 75° E
             </div>
         </div>
-    </section>
-
-    <script>
-        const tilt = document.getElementById('tilt');
-        document.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth / 2 - e.pageX) / 30;
-            const y = (window.innerHeight / 2 - e.pageY) / 30;
-            tilt.style.transform = `rotateY(${-x}deg) rotateX(${y}deg)`;
-        });
-    </script>
+    </div>
 </body>
 </html>
