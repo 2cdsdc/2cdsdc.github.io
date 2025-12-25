@@ -2,46 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanket Kumar | Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fdfdfd; padding: 100px 10%; color: #1e293b; }
-        nav { position: fixed; top: 0; left: 0; width: 100%; background: white; padding: 20px 10%; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
-        nav a { text-decoration: none; color: #1e293b; font-weight: 600; margin-left: 20px; }
-        
-        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .info h1 { font-size: 3rem; margin-bottom: 20px; }
-        .form-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 10px; font-family: inherit; }
-        button { background: #4f46e5; color: white; border: none; padding: 15px 30px; border-radius: 10px; font-weight: 700; cursor: pointer; width: 100%; }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Contact | Sanket Kumar</title>
 </head>
 <body>
+
     <nav>
-        <div style="font-weight: 800;">SANKET.</div>
-        <div><a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="contact.html">Contact</a></div>
+        <a href="index.html" class="logo">SANKET KUMAR</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
-    <div class="container">
-        <div class="info">
-            <h1>Get in touch</h1>
-            <p style="color:#64748b; margin-bottom: 30px;">I am always open to discussing new projects or creative opportunities.</p>
-            <p><strong>Email:</strong> sanketku231@gmail.com</p>
-            <p><strong>Phone:</strong> +91 7895356317</p>
+    <section style="padding: 150px 10%; min-height: 80vh;">
+        <h1 style="font-size: 3rem; margin-bottom: 40px;">Let's Connect.</h1>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+            <div>
+                <p style="margin-bottom: 20px;">Email: <strong>sanketku231@gmail.com</strong></p>
+                <p style="margin-bottom: 20px;">Phone: <strong>+91 7895356317</strong></p>
+                <p>Location: India</p>
+            </div>
+
+            <div>
+                <form action="#" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" placeholder="Name" style="padding: 15px; border: 1px solid #ddd;">
+                    <input type="email" placeholder="Email" style="padding: 15px; border: 1px solid #ddd;">
+                    <textarea placeholder="Message" rows="5" style="padding: 15px; border: 1px solid #ddd;"></textarea>
+                    <button type="submit" class="btn-davis" style="cursor: pointer;">Submit</button>
+                </form>
+            </div>
         </div>
-        <div class="form-card">
-            <form action="https://formspree.io/f/your-id" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
-<script src="assets/js/main.js"></script>
+    </section>
+
 </body>
 </html>
