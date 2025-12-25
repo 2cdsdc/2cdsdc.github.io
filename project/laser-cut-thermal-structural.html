@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coupled Thermal & Structural Analysis | Sanket Kumar</title>
+
+<meta name="description" content="Coupled transient thermal and structural CAE analysis of laser cutting using ANSYS Mechanical APDL.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+/* ===== PAGE POLISH – CAE STYLE ===== */
+
+.project-hero {
+  padding: 120px 10% 60px;
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+.project-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  margin-bottom: 15px;
+}
+
+.project-hero p {
+  color: var(--text-dim);
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.project-tags span {
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.45);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+/* ===== VIDEO SECTION ===== */
+
+.video-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.video-block {
+  margin-bottom: 60px;
+}
+
+.video-block h3 {
+  margin-bottom: 20px;
+}
+
+video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+/* ===== DETAILS ===== */
+
+.details {
+  padding: 60px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.details h3 {
+  margin-bottom: 15px;
+}
+
+.details ul {
+  padding-left: 18px;
+}
+
+.details li {
+  margin-bottom: 8px;
+  color: var(--text-dim);
+}
+
+@media(max-width: 900px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <strong>Sanket Kumar</strong>
+  <div>
+    <a href="../index.html">Home</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../assets/resume.pdf" target="_blank">Resume</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="project-hero">
+  <h1>Coupled Transient Thermal & Structural Analysis of Laser Cutting</h1>
+  <p>
+    A detailed CAE study performed in ANSYS 2024 R1 to evaluate the thermal
+    and mechanical response of a steel component subjected to laser cutting
+    over time using coupled transient simulation.
+  </p>
+
+  <div class="project-tags">
+    <span>ANSYS 2024 R1</span>
+    <span>Transient Thermal</span>
+    <span>Structural Analysis</span>
+    <span>Mechanical APDL</span>
+    <span>CAE</span>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="video-section">
+
+  <div class="video-block">
+    <h3>Transient Thermal Response</h3>
+    <video controls>
+      <source src="../assets/videos/cae-laser-cut/thermal.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="video-block">
+    <h3>Structural Stress Response</h3>
+    <video controls>
+      <source src="../assets/videos/cae-laser-cut/structural.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+</section>
+
+<!-- DETAILS -->
+<section class="details">
+
+  <div>
+    <h3>Simulation Overview</h3>
+    <p>
+      This project analyzes the effect of laser cutting on a structural steel
+      component by coupling transient thermal results with structural response.
+      Temperature-dependent strains and nonlinear effects were considered to
+      capture realistic mechanical behavior during the cutting process.
+    </p>
+  </div>
+
+  <div>
+    <h3>Key Technical Highlights</h3>
+    <ul>
+      <li>Material: Structural Steel (nonlinear + thermal strain enabled)</li>
+      <li>Heat Input: Volumetric temperature mapping</li>
+      <li>Simulation Time: 10 seconds</li>
+      <li>Maximum Temperature: 165.14 °C</li>
+      <li>Average Temperature: ~102 °C</li>
+      <li>Maximum Equivalent Stress: 121.3 MPa</li>
+      <li>Average Stress: ~58.7 MPa</li>
+      <li>Mesh: ~7,982 nodes | 1,196 elements</li>
+      <li>Contacts: 29 bonded face-to-face</li>
+      <li>Supports: Frictionless constraints</li>
+      <li>Solver: Mechanical APDL (large deflection enabled)</li>
+    </ul>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 Sanket Kumar
+</footer>
+
+</body>
+</html>
 
