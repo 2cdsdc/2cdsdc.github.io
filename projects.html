@@ -5,35 +5,30 @@
     <title>Archive | Sanket Kumar</title>
 </head>
 <body>
-    <nav>
-        <div style="font-weight: 800; font-size: 1.3rem;">SK.</div>
-        <div class="nav-links"><a href="index.html">Identity</a> <a href="projects.html">Archive</a> <a href="contact.html">Connect</a></div>
-    </nav>
+    <div style="padding: 180px 8% 100px;">
+        <h2 style="font-family: 'Syne'; font-size: 4rem; margin-bottom: 80px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+            PROJECTS<span style="opacity: 0.3;">_01-04</span>
+        </h2>
 
-    <div style="padding: 140px 10%;">
-        <h2 style="font-size: 3rem; margin-bottom: 50px;">Selected Engineering Work</h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;">
-            <div class="card" style="grid-column: span 8;">
-                <a href="project/cad-engine.html" style="text-decoration:none; color:inherit;">
-                    <img src="assets/images/cad-thumb.jpg" style="height: 400px;">
-                    <div style="margin-top: 20px;">
-                        <span style="color:var(--accent); font-weight:700; font-size:0.8rem; text-transform:uppercase;">Mechanical Design</span>
-                        <h3>V6 Radial Engine: Comprehensive Assembly</h3>
-                        <p style="color:var(--text-muted); margin-top:10px;">Modeling 140+ individual parts with tolerance stack-up analysis.</p>
-                    </div>
-                </a>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 100px;">
+            
+            <div class="project-card" onclick="location.href='project/cad-engine.html'">
+                <p class="mono" style="margin-bottom: 20px;">01 // SOLIDWORKS</p>
+                <h3 style="font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 20px;">V6 RADIAL <br> ENGINE</h3>
+                <div style="overflow: hidden; height: 300px;">
+                    <img src="assets/images/cad-thumb.jpg" style="width: 100%; transition: 1s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p style="margin-top: 20px; font-weight: 300; opacity: 0.6;">A full assembly simulation with detailed motion analysis.</p>
             </div>
 
-            <div class="card" style="grid-column: span 4;">
-                <a href="project/simulation-truss.html" style="text-decoration:none; color:inherit;">
-                    <img src="assets/images/sim-thumb.jpg" style="height: 400px;">
-                    <div style="margin-top: 20px;">
-                        <span style="color:var(--accent); font-weight:700; font-size:0.8rem; text-transform:uppercase;">CAE / Simulation</span>
-                        <h3>Static Structural Analysis</h3>
+            <div class="project-card" style="margin-top: 100px;" onclick="location.href='project/ml-failure.html'">
+                <p class="mono" style="margin-bottom: 20px;">02 // PYTHON + ML</p>
+                <h3 style="font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 20px;">PREDICTIVE <br> ANALYSIS</h3>
+                <div style="overflow: hidden; height: 300px; background: #111;">
                     </div>
-                </a>
+                <p style="margin-top: 20px; font-weight: 300; opacity: 0.6;">Using sensor data to predict hardware failure rates.</p>
             </div>
+
         </div>
     </div>
 </body>
