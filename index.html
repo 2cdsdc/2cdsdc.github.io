@@ -2,50 +2,48 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Sanket Kumar | Portfolio</title>
+    <title>Sanket Kumar | Identity</title>
 </head>
 <body>
     <nav>
-        <div style="font-weight: 800; font-size: 1.3rem; letter-spacing: -1px;">SK<span style="color:var(--accent)">.</span></div>
-        <div class="nav-links">
-            <a href="index.html">Identity</a>
-            <a href="projects.html">Archive</a>
-            <a href="contact.html">Connect</a>
+        <div style="font-family: 'Syne'; font-weight: 800; font-size: 1.5rem;">SANKET</div>
+        <div>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="projects.html" class="nav-link">ARCHIVE</a>
+            <a href="contact.html" class="nav-link">CONNECT</a>
         </div>
     </nav>
 
-    <main style="padding: 160px 10% 100px; display: flex; align-items: center; gap: 80px;">
-        <div style="flex: 1.2;">
-            <span style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; display: block;">Available for Projects</span>
-            <h1 style="font-size: 4.5rem; margin-bottom: 25px; line-height: 1.05;">Designing systems for a <span style="color: var(--accent);">new era</span> of industry.</h1>
-            <p style="color: var(--text-muted); font-size: 1.25rem; margin-bottom: 40px; max-width: 600px;">
-                Mechanical Engineer bridging the gap between hardware design and computational intelligence. Focused on SolidWorks, Ansys, and ML.
-            </p>
-            <div style="display: flex; gap: 20px; align-items: center;">
-                <a href="assets/resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-                <div style="display: flex; gap: 15px; margin-left: 10px;">
-                    <a href="https://linkedin.com/in/yourlink" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/yourlink" class="icon-link"><i class="fab fa-github"></i></a>
+    <section style="display: flex; align-items: center; min-height: 100vh; padding: 0 8%;">
+        <div style="flex: 1.4; z-index: 2;">
+            <p class="mono" style="margin-bottom: 20px;">[ Based in India // 2025 ]</p>
+            <h1 style="font-family: 'Syne'; font-size: clamp(4rem, 8vw, 7rem); line-height: 0.9; margin-bottom: 40px;">
+                ENGINEERING <br> <span style="opacity: 0.3;">PRECISION.</span>
+            </h1>
+            <div style="display: flex; gap: 40px;">
+                <a href="assets/resume.pdf" style="color: #fff; text-decoration: none; border-bottom: 1px solid #fff; padding-bottom: 5px; font-weight: 600;">GET RESUME</a>
+                <a href="https://linkedin.com" class="mono" style="text-decoration: none; color: #fff;">LINKEDIN</a>
+                <a href="https://github.com" class="mono" style="text-decoration: none; color: #fff;">GITHUB</a>
+            </div>
+        </div>
+
+        <div style="flex: 1; perspective: 1000px;">
+            <div class="photo-box" id="box">
+                <img src="assets/images/profile.jpg" alt="Sanket Kumar">
+                <div style="position: absolute; top: -20px; right: -20px; font-family: 'JetBrains Mono'; font-size: 0.6rem; opacity: 0.4;">
+                    ROTATION_AXIS: Z-100
                 </div>
             </div>
         </div>
-        <div style="flex: 0.8; position: relative;">
-            <div class="profile-blob">
-                <img src="assets/images/profile.jpg" alt="Sanket Kumar" style="width: 100%; border-radius: 40px; transform: rotate(2deg);">
-            </div>
-        </div>
-    </main>
+    </section>
 
-    <style>
-        .icon-link { color: var(--text-muted); font-size: 1.3rem; transition: 0.3s; }
-        .icon-link:hover { color: var(--accent); }
-        .profile-blob {
-            position: relative;
-            animation: heroFloat 6s ease-in-out infinite;
-        }
-        @keyframes heroFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-    </style>
+    <script>
+        const box = document.getElementById('box');
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 30;
+            const y = (window.innerHeight / 2 - e.pageY) / 30;
+            box.style.transform = `rotateY(${-x}deg) rotateX(${y}deg)`;
+        });
+    </script>
 </body>
 </html>
