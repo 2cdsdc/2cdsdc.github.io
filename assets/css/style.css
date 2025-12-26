@@ -464,3 +464,166 @@ footer {
     font-size: 0.95rem;
   }
 }
+/* =====================================================
+   PROJECT PAGE POLISH
+   ===================================================== */
+
+/* Project section heading */
+.section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+/* Project intro text */
+.section > p {
+  max-width: 760px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 45px;
+}
+
+/* Project grid spacing */
+.grid {
+  gap: 38px;
+}
+
+/* Project card refinement */
+.project-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.01)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+/* Project image */
+.project-card img {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Project content */
+.project-card .content {
+  padding: 24px;
+}
+
+/* Project title */
+.project-card h3 {
+  font-size: 1.3rem;
+}
+
+/* View project link */
+.project-card a {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =====================================================
+   CONTACT PAGE POLISH
+   ===================================================== */
+
+/* Contact layout */
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Contact cards */
+.contact-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift */
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Contact icons */
+.contact-card i {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* Contact headings */
+.contact-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* Contact text */
+.contact-card p,
+.contact-card a {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+/* Contact form */
+.contact-form {
+  background: rgba(255,255,255,0.03);
+  border-radius: 20px;
+  padding: 35px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Input fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+/* Input focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Submit button */
+.contact-form button {
+  background: linear-gradient(
+    135deg,
+    rgba(79,156,249,0.9),
+    rgba(79,156,249,0.7)
+  );
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover */
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(79,156,249,0.35);
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .project-card img {
+    height: 190px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+}
