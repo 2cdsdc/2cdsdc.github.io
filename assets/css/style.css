@@ -228,3 +228,133 @@ footer {
   align-items: center;
   gap: 10px;
 }
+/* ================= PROJECT PAGE POLISH ================= */
+
+/* Section spacing */
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Section headings */
+.section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.section > p {
+  max-width: 720px;
+  color: var(--text-dim);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* Projects grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* Project card */
+.project-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.01)
+  );
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover lift */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+}
+
+/* Project image */
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Image zoom on hover */
+.project-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Card content */
+.project-card .content {
+  padding: 22px;
+}
+
+/* Title */
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.project-card p {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Project tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.project-tags span {
+  font-size: 0.7rem;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* View project link */
+.project-card a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card a:hover {
+  transform: translateX(6px);
+  opacity: 0.9;
+}
+
+/* Filter buttons polish */
+.filter-tabs {
+  margin-bottom: 45px;
+}
+
+.filter-btn {
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card img {
+    height: 190px;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+}
