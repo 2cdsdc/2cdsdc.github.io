@@ -248,7 +248,27 @@ window.addEventListener("scroll", () => {
 /* Run once on load */
 window.dispatchEvent(new Event("scroll"));
 </script>
+<!-- PROJECT MODAL -->
+<div class="project-modal" id="projectModal">
+  <div class="modal-box">
+    <span class="modal-close" onclick="closeModal()">✕</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+<script>
+function openModal(title, desc) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("projectModal").classList.add("show");
+}
+
+function closeModal() {
+  document.getElementById("projectModal").classList.remove("show");
+}
+</script>
 
 </body>
 </html>
+
 
