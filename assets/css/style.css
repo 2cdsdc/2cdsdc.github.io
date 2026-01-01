@@ -387,3 +387,100 @@ body.light {
     font-size: 2.3rem;
   }
 }
+/* ================= SUBTLE BACKGROUND ANIMATION ================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(79,156,249,0.08),
+    transparent 45%
+  ),
+  radial-gradient(
+    circle at 80% 70%,
+    rgba(79,156,249,0.06),
+    transparent 50%
+  );
+  animation: bgMove 18s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes bgMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-40px); }
+}
+
+/* ================= PROJECT MODAL ================= */
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,10,20,0.8);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.project-modal.show {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 35px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  animation: modalIn 0.4s ease;
+}
+
+@keyframes modalIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text-dim);
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+/* ================= RESUME BUTTON ANIMATION ================= */
+
+.resume-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.resume-link:hover::after {
+  animation: shine 0.8s ease;
+}
+
+@keyframes shine {
+  to { transform: translateX(100%); }
+}
