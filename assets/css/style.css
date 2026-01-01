@@ -627,3 +627,23 @@ footer {
     padding: 25px;
   }
 }
+/* ================= CAD SUB-SECTIONS ================= */
+
+.cad-subheading {
+  margin-top: 70px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: var(--text);
+  position: relative;
+}
+
+/* Accent line under subheading */
+.cad-subheading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 10px;
+  border-radius: 4px;
+}
